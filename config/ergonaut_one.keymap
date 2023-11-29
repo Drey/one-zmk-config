@@ -8,11 +8,11 @@
 #define ADJ 3
 
 &lt {
-    quick_tap_ms = <200>;
+    quick-tap-ms = <100>;
 };
 
 &mt {
-    quick_tap_ms = <200>;
+    quick-tap-ms = <100>;
 };
 
 / {
@@ -179,7 +179,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LEFT_SHIFT>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 10>,
                 <&kp LEFT_SHIFT>;
 
             label = "DOUBLE_SHIFT";
