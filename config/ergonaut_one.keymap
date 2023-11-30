@@ -26,6 +26,18 @@
     };
 
     macros {
+        plain_text: plain_text {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RGUI &kp RSHFT &kp K>,
+                <&macro_release>,
+                <&kp RGUI &kp RSHFT &kp K>;
+
+            label = "PLAIN_TEXT";
+        };
+
         moom: moom {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
