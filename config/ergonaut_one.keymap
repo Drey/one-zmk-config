@@ -235,6 +235,8 @@
             bindings = <&double_shift>;
             key-positions = <42 37 40>;
             layers = <0>;
+            slow-release;
+            timeout-ms = <100>;
         };
     };
 
