@@ -249,6 +249,13 @@
             layers = <0>;
             timeout-ms = <50>;
         };
+
+        plaint_text {
+            bindings = <&plain_text>;
+            key-positions = <14 15>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
     };
 
     keymap {
