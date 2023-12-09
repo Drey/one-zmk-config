@@ -196,6 +196,14 @@
 
             label = "DOUBLE_SHIFT";
         };
+
+        moom_display: moom_display {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&moom>, <&macro_wait_time 50>, <&macro_tap>, <&kp F10>;
+
+            label = "MOOM_DISPLAY";
+        };
     };
 
     combos {
@@ -292,7 +300,7 @@
             bindings = <
 &bootloader  &none         &none         &none         &none         &none         &snagit  &moom_left       &moom_shrink       &moom_right       &none  &bootloader
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &moom    &moom_left_half  &moom_top_half     &moom_right_half  &none  &none
-&sys_reset   &none         &none         &none         &none         &none         &none    &none            &moom_bottom_half  &none             &none  &sys_reset
+&sys_reset   &none         &none         &none         &none         &none         &none    &moom_display    &moom_bottom_half  &none             &none  &sys_reset
                                          &trans        &none         &trans        &trans   &none            &trans
             >;
         };
