@@ -222,9 +222,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp RIGHT>,
+                <&kp LCTRL &kp RIGHT_ARROW>,
                 <&macro_release>,
-                <&kp RIGHT &kp LCTRL>;
+                <&kp RIGHT_ARROW &kp LCTRL>;
 
             label = "RIGHT_DESK";
         };
