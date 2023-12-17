@@ -204,6 +204,30 @@
 
             label = "MOOM_DISPLAY";
         };
+
+        left_desk: left_desk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_ARROW &kp LCTRL>;
+
+            label = "LEFT_DESK";
+        };
+
+        right_desk: right_desk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp RIGHT>,
+                <&macro_release>,
+                <&kp RIGHT &kp LCTRL>;
+
+            label = "RIGHT_DESK";
+        };
     };
 
     combos {
@@ -264,6 +288,20 @@
             key-positions = <14 15>;
             timeout-ms = <50>;
             layers = <0>;
+        };
+
+        left_desk {
+            bindings = <&left_desk>;
+            key-positions = <19 20>;
+            layers = <1>;
+            timeout-ms = <50>;
+        };
+
+        right_desk {
+            bindings = <&right_desk>;
+            key-positions = <20 21>;
+            layers = <1>;
+            timeout-ms = <50>;
         };
     };
 
