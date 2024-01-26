@@ -228,24 +228,14 @@
         jb_run: jb_run {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LEFT_ALT &kp R>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT &kp R>;
-
+            bindings = <&kp LA(LC(R))>;
             label = "JB_RUN";
         };
 
         jb_debug: jb_debug {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LEFT_ALT &kp D>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT &kp D>;
-
+            bindings = <&kp LA(LC(D))>;
             label = "JB_DEBUG";
         };
     };
