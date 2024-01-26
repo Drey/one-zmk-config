@@ -7,13 +7,9 @@
 #define RSE 2
 #define ADJ 3
 
-&lt {
-    quick-tap-ms = <200>;
-};
+&lt { quick-tap-ms = <200>; };
 
-&mt {
-    quick-tap-ms = <200>;
-};
+&mt { quick-tap-ms = <200>; };
 
 / {
     conditional_layers {
@@ -228,6 +224,30 @@
 
             label = "RIGHT_DESK";
         };
+
+        jb_run: jb_run {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_ALT &kp R>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp R>;
+
+            label = "JB_RUN";
+        };
+
+        jb_debug: jb_debug {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_ALT &kp D>,
+                <&macro_release>,
+                <&kp LCTRL &kp LALT &kp D>;
+
+            label = "JB_DEBUG";
+        };
     };
 
     combos {
@@ -349,10 +369,10 @@
 
         raise_layer {
             bindings = <
-&kp LGUI   &none  &kp F7  &kp F8  &kp F9  &kp F10  &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp RWIN
-&kp LALT   &none  &kp F4  &kp F5  &kp F6  &kp F11  &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &kp RALT
-&kp LCTRL  &none  &kp F1  &kp F2  &kp F3  &kp F12  &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &kp RCTRL
-                          &trans  &trans  &trans   &trans        &trans    &trans
+&kp LGUI   &jb_run    &kp F7  &kp F8  &kp F9  &kp F10  &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp RWIN
+&kp LALT   &jb_debug  &kp F4  &kp F5  &kp F6  &kp F11  &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &kp RALT
+&kp LCTRL  &none      &kp F1  &kp F2  &kp F3  &kp F12  &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &kp RCTRL
+                              &trans  &trans  &trans   &trans        &trans    &trans
             >;
         };
 
